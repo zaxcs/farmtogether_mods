@@ -29,8 +29,8 @@ namespace InfiniteBoost
             public static bool Prefix(Effort __instance, uint effortDecrease = 1)
             {
                 return !enabled;
-                var xp = Traverse.Create(__instance).Field("experience").GetValue<Experience>();
-                return GameGlobals.MaxEffort(xp.Level) / 2 < __instance.Value - effortDecrease;
+//                var xp = Traverse.Create(__instance).Field("experience").GetValue<Experience>();
+//                return GameGlobals.MaxEffort(xp.Level) / 2 < __instance.Value - effortDecrease;
             }
         }
     }
