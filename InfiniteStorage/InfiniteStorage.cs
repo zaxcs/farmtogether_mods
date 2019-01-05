@@ -36,8 +36,7 @@ namespace InfiniteStorage
         }
 
 
-        [HarmonyPatch(typeof(FarmResourceStorage))]
-        [HarmonyPatch("Progress", MethodType.Getter)]
+        [HarmonyPatch(typeof(FarmResourceStorage), "Progress", MethodType.Getter)]
         public class Patch_FarmResourceStorage_Progress
         {
             public static bool Prefix(FarmResourceStorage __instance, ref float __result)
@@ -49,8 +48,7 @@ namespace InfiniteStorage
             }
         }
 
-        [HarmonyPatch(typeof(FarmResourceStorage))]
-        [HarmonyPatch("IncreaseAmount")]
+        [HarmonyPatch(typeof(FarmResourceStorage), "IncreaseAmount")]
         public class Patch_FarmResourceStorage_IncreaseAmount
         {
             public static bool Prefix(FarmResourceStorage __instance, long amount)
@@ -58,6 +56,19 @@ namespace InfiniteStorage
                 if (!enabled)
                     return true;
                 Traverse.Create(__instance).Field("amount").SetValue(__instance.Amount + amount);
+                return false;
+            }
+        }
+
+        [HarmonyPatch(typeof(FarmResourceStorage), "DecreaseMaxValue")]
+        public class Patch_FarmResourceStorage_DecreaseMaxValue
+        {
+            public static bool Prefix(ref long ___maxValue, long amount)
+            {
+                if (!enabled)
+                    return true;
+
+                ___maxValue = Math.Max(0, ___maxValue - amount);
                 return false;
             }
         }
