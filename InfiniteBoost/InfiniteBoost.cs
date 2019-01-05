@@ -1,5 +1,6 @@
 using System.Reflection;
 using Harmony12;
+using Logic.Farm;
 using UnityModManagerNet;
 
 namespace InfiniteBoost
@@ -21,13 +22,15 @@ namespace InfiniteBoost
             return true;
         }
 
-        [HarmonyPatch(typeof(PlayerScript))]
-        [HarmonyPatch("PayFuel")]
-        public class Patch_PlayerScript_PayFuel
+        [HarmonyPatch(typeof(Effort))]
+        [HarmonyPatch("Spend")]
+        public class Patch_Effort_Spend
         {
-            public static bool Prefix(PlayerScript __instance, uint value = 1)
+            public static bool Prefix(Effort __instance, uint effortDecrease = 1)
             {
-                return !enabled && __instance.MaxFuel / 2 < __instance.Fuel - value;
+                return !enabled;
+                var xp = Traverse.Create(__instance).Field("experience").GetValue<Experience>();
+                return GameGlobals.MaxEffort(xp.Level) / 2 < __instance.Value - effortDecrease;
             }
         }
     }
