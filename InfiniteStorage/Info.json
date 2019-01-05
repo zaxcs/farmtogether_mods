@@ -1,0 +1,7 @@
+{
+  "Id": "InfiniteStorage",
+  "DisplayName": "Enable Infinite Storage",
+  "Author": "zax",
+  "Version": "1.0.0",
+  "EntryMethod": "InfiniteStorage.InfiniteStorage.Load"
+}

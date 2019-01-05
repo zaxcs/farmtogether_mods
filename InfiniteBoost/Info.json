@@ -1,0 +1,7 @@
+{
+  "Id": "InfiniteBoost",
+  "DisplayName": "Boost will not go below 50%",
+  "Author": "zax",
+  "Version": "1.0.0",
+  "EntryMethod": "InfiniteBoost.InfiniteBoost.Load"
+}

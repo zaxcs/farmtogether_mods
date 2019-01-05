@@ -1,0 +1,7 @@
+{
+  "Id": "VehicleRange5x5",
+  "DisplayName": "Extend Vehicle Range to 5x5",
+  "Author": "zax",
+  "Version": "1.0.0",
+  "EntryMethod": "VehicleRange5x5.VehicleRange5x5.Load"
+}

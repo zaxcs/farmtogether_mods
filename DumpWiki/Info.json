@@ -1,0 +1,7 @@
+{
+  "Id": "DumpWiki",
+  "DisplayName": "Dump items for Wiki",
+  "Author": "zax",
+  "Version": "1.0.0",
+  "EntryMethod": "DumpWiki.DumpWiki.Load"
+}

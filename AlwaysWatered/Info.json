@@ -1,0 +1,7 @@
+{
+  "Id": "AlwaysWatered",
+  "DisplayName": "Crops and Flowers are irrigated",
+  "Author": "zax",
+  "Version": "1.0.0",
+  "EntryMethod": "AlwaysWatered.AlwaysWatered.Load"
+}

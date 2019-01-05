@@ -1,0 +1,7 @@
+{
+  "Id": "InfiniteFuel",
+  "DisplayName": "Fuel will not go below 50%",
+  "Author": "zax",
+  "Version": "1.0.0",
+  "EntryMethod": "InfiniteFuel.InfiniteFuel.Load"
+}

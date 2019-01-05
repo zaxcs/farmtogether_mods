@@ -1,0 +1,7 @@
+{
+  "Id": "EnableCheats",
+  "DisplayName": "Enable additional Cheats",
+  "Author": "zax",
+  "Version": "1.0.0",
+  "EntryMethod": "EnableCheats.EnableCheats.Load"
+}
