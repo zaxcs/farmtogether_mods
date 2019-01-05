@@ -1,0 +1,7 @@
+{
+  "Id": "ShowUnlock",
+  "DisplayName": "Show Items that Unlocks others",
+  "Author": "zax",
+  "Version": "1.0.0",
+  "EntryMethod": "ShowUnlock.ShowUnlock.Load"
+}

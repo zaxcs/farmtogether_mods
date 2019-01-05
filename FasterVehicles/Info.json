@@ -1,0 +1,7 @@
+{
+  "Id": "FasterVehicles",
+  "DisplayName": "Speedup all Vehicles",
+  "Author": "zax",
+  "Version": "1.0.0",
+  "EntryMethod": "FasterVehicles.FasterVehicles.Load"
+}
